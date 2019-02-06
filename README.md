@@ -1,9 +1,11 @@
-This repository contains code for the ACL 2017 paper *[Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368)*. 
+Here's the pointer-generator README file for the ACL 2017 paper *[Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368)* about Google's generative summarizer called TextSum. 
 
-## Looking for test set output?
+## Looking for TextSum test set output?
+
 The test set output of the models described in the paper can be found [here](https://drive.google.com/file/d/0B7pQmm-OfDv7MEtMVU5sOHc5LTg/view?usp=sharing).
 
-## Looking for pretrained model?
+## Looking for a pretrained TextSum model?
+
 A pretrained model is available here:
 * [Version for Tensorflow 1.0](https://drive.google.com/file/d/0B7pQmm-OfDv7SHFadHR4RllfR1E/view?usp=sharing)
 * [Version for Tensorflow 1.2.1](https://drive.google.com/file/d/0B7pQmm-OfDv7ZUhHZm9ZWEZidDg/view?usp=sharing)
@@ -11,9 +13,11 @@ A pretrained model is available here:
 (The only difference between these two is the naming of some of the variables in the checkpoint. Tensorflow 1.0 uses `lstm_cell/biases` and `lstm_cell/weights` whereas Tensorflow 1.2.1 uses `lstm_cell/bias` and `lstm_cell/kernel`).
 
 ## Looking for CNN / Daily Mail data?
+
 Instructions are [here](https://github.com/abisee/cnn-dailymail).
 
 ## About this code
+
 This code is based on the [TextSum code](https://github.com/tensorflow/models/tree/master/textsum) from Google Brain.
 
 This code was developed for Tensorflow 0.12, but has been updated to run with Tensorflow 1.0.
@@ -23,11 +27,13 @@ Tensorflow 1.0's [new seq2seq library](https://www.tensorflow.org/api_guides/pyt
 ## How to run
 
 ### Get the dataset
+
 To obtain the CNN / Daily Mail dataset, follow the instructions [here](https://github.com/abisee/cnn-dailymail). Once finished, you should have [chunked](https://github.com/abisee/cnn-dailymail/issues/3) datafiles `train_000.bin`, ..., `train_287.bin`, `val_000.bin`, ..., `val_013.bin`, `test_000.bin`, ..., `test_011.bin` (each contains 1000 examples) and a vocabulary file `vocab`.
 
 **Note**: If you did this before 7th May 2017, follow the instructions [here](https://github.com/abisee/cnn-dailymail/issues/2) to correct a bug in the process.
 
 ### Run training
+
 To train your model, run:
 
 ```
